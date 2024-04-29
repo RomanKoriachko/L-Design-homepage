@@ -236,6 +236,7 @@ body {
 				}
 				.swiper-scrollbar-drag {
 					background-color: #f9fbf3;
+					cursor: pointer;
 				}
 			}
 			// .autoplay-progress {
@@ -335,11 +336,12 @@ body {
 		background-color: #374836;
 		color: #ffffff;
 		padding-top: 100px;
-		padding-bottom: 148px;
+		padding-bottom: 280px;
 		.cooperation-title-row {
 			display: flex;
 			align-items: center;
 			gap: 25px;
+			margin-bottom: 180px;
 			.cooperation-title {
 				font-size: 80px;
 				font-weight: 200;
@@ -369,6 +371,52 @@ body {
 					margin-top: 64px;
 					margin-left: 19px;
 				}
+			}
+		}
+		.cooperation-content {
+			.cooperation-bar {
+				height: 2px;
+				width: 100%;
+				margin: 42px 0px;
+				background: linear-gradient(
+					-90deg,
+					#f9fbf3 45%,
+					rgba(249, 251, 243, 0) 100%
+				);
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				justify-items: end;
+				.cooperation-bar-circle {
+					width: 24px;
+					height: 24px;
+					background-color: #f9fbf3;
+					border-radius: 50%;
+					margin-top: -10px;
+					position: relative;
+				}
+			}
+			.cooperation-step {
+				width: 400px;
+				.cooperation-step-title {
+					font-size: 24px;
+					font-weight: 500;
+					line-height: 32px;
+				}
+				.cooperation-step-subtitle {
+					font-size: 20px;
+					font-weight: 400;
+					line-height: 30px;
+					opacity: 0.5;
+				}
+			}
+			.cooperation-step-3 {
+				position: absolute;
+				bottom: 55px;
+			}
+			.cooperation-step-2,
+			.cooperation-step-4 {
+				position: absolute;
+				top: 55px;
 			}
 		}
 	}
