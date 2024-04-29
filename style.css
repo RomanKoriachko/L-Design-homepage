@@ -131,6 +131,7 @@ table {
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #f9fbf3;
 }
 
 .container {
@@ -151,7 +152,7 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -282,7 +283,7 @@ body {
   max-width: 410px;
   color: #f9fbf3;
   padding: 25px 16px 25px 25px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(260.88deg, rgba(255, 255, 255, 0.5) 2.43%, rgba(255, 255, 255, 0.1) 91.88%);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -325,7 +326,7 @@ body {
   inset: 0;
   padding: 2px;
   border-radius: 20px;
-  background: linear-gradient(190.88deg, rgba(255, 255, 255, 0.5) 2.43%, rgba(255, 255, 255, 0.1) 91.88%);
+  background: linear-gradient(260.88deg, rgba(255, 255, 255, 0.5) 2.43%, rgba(255, 255, 255, 0.1) 91.88%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -350,4 +351,66 @@ body {
 }
 .main .preview-section .swiper .swiper-scrollbar .swiper-scrollbar-drag {
   background-color: #f9fbf3;
+}
+.main .description-section {
+  padding: 80px 0px 56px;
+}
+.main .description-section .description-content {
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -3px;
+  color: #242924;
+  width: 85%;
+}
+.main .numbers-section {
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 324px;
+}
+.main .numbers-section .numbers-container {
+  padding-right: 16px;
+  padding-left: 80px;
+  max-width: 1352px;
+  margin: 0 auto;
+}
+.main .numbers-section .numbers-bg {
+  background-image: url(images/numbers-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.main .numbers-section .numbers-content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.main .numbers-section .numbers-content-row .numbers-row {
+  display: flex;
+  gap: 60px;
+}
+.main .numbers-section .numbers-content-row .numbers-row .number-row-item .number-row-item-title {
+  font-size: 95px;
+  font-weight: 700;
+  line-height: 104.5px;
+  letter-spacing: -3px;
+  color: #374836;
+}
+.main .numbers-section .numbers-content-row .numbers-row .number-row-item .number-row-item-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+  color: #7f8f80;
+}
+.main .numbers-section .numbers-content-row .numbers-text {
+  width: 40%;
+  color: #7f8f80;
+  line-height: 26px;
 }
