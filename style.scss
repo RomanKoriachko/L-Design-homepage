@@ -54,6 +54,7 @@ body {
 .main {
 	.preview-section {
 		height: 100vh;
+		min-height: 900px;
 		background-image: url(images/bg.jpg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -64,7 +65,7 @@ body {
 		.preview-experience-container {
 			position: absolute;
 			right: 0px;
-			top: 120px;
+			top: 100px;
 			color: #f9fbf3;
 			width: 221px;
 			.preview-experience-wrapper {
@@ -103,6 +104,7 @@ body {
 		}
 		.swiper {
 			height: 100vh;
+			min-height: 900px;
 			.slider-content {
 				position: absolute;
 				top: 50%;
@@ -125,6 +127,7 @@ body {
 					margin-bottom: 32px;
 					color: #f9fbf3;
 					opacity: 0.75;
+					width: 60%;
 				}
 				.slide-buttons-row {
 					display: flex;
