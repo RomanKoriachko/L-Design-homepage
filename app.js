@@ -30,3 +30,38 @@ const swiper = new Swiper('.swiper', {
 	// 	},
 	// },
 });
+
+const servicesItems = document.querySelectorAll('.services-item');
+const serviceItem1 = document.querySelector('.services-item-1');
+const serviceItem2 = document.querySelector('.services-item-2');
+const serviceItem3 = document.querySelector('.services-item-3');
+const serviceItem4 = document.querySelector('.services-item-4');
+const servicesContainer = document.querySelector('.services-container');
+
+serviceItem1.addEventListener('mouseover', () => {
+	servicesContainer.classList.add('hovered-1');
+});
+serviceItem1.addEventListener('mouseout', () => {
+	servicesContainer.classList.remove('hovered-1');
+});
+
+serviceItem2.addEventListener('mouseover', () => {
+	servicesContainer.classList.add('hovered-2');
+});
+serviceItem2.addEventListener('mouseout', () => {
+	servicesContainer.classList.remove('hovered-2');
+});
+
+serviceItem3.addEventListener('mouseover', () => {
+	servicesContainer.classList.add('hovered-3');
+});
+serviceItem3.addEventListener('mouseout', () => {
+	servicesContainer.classList.remove('hovered-3');
+});
+
+serviceItem4.addEventListener('mouseover', () => {
+	servicesContainer.classList.add('hovered-4');
+});
+serviceItem4.addEventListener('mouseout', () => {
+	servicesContainer.classList.remove('hovered-4');
+});
