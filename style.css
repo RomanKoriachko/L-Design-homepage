@@ -232,7 +232,6 @@ body {
 }
 .main .preview-section .preview-section-container .swiper-scrollbar .swiper-scrollbar-drag {
   background-color: #f9fbf3;
-  cursor: pointer;
 }
 .main .preview-section .preview-experience-container {
   position: absolute;
@@ -321,7 +320,7 @@ body {
   gap: 28px;
   align-items: center;
 }
-.main .preview-section .slider-content .slide-buttons-row button {
+.main .preview-section .slider-content .slide-buttons-row .slide-cooperation-btn {
   font-family: "Roboto", sans-serif;
   padding: 10px 40px;
   color: #374836;
@@ -330,8 +329,13 @@ body {
   font-weight: 700;
   line-height: 24px;
   border: none;
+  cursor: pointer;
 }
-.main .preview-section .slider-content .slide-buttons-row > div {
+.main .preview-section .slider-content .slide-buttons-row .projects-link {
+  text-decoration: none;
+  color: #f9fbf3;
+}
+.main .preview-section .slider-content .slide-buttons-row .projects-link > div {
   border-bottom: 1px solid #f9fbf3;
   padding-bottom: 7px;
   font-weight: 700;

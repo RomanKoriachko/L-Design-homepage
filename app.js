@@ -3,10 +3,12 @@
 const aboutBtn = document.querySelector('.header-menu-item-1');
 const servicesBtn = document.querySelector('.header-menu-item-3');
 const contactsBtn = document.querySelector('.header-menu-item-4');
+const cooperationBtn = document.querySelector('.slide-cooperation-btn');
 
 const aboutSection = document.querySelector('.description-section');
 const servicesSection = document.querySelector('.services-section');
 const contactsSection = document.querySelector('.contacts-section');
+const cooperationSection = document.querySelector('.cooperation-section');
 
 aboutBtn.addEventListener('click', function () {
 	window.scrollTo({
@@ -25,6 +27,13 @@ servicesBtn.addEventListener('click', function () {
 contactsBtn.addEventListener('click', function () {
 	window.scrollTo({
 		top: contactsSection.getBoundingClientRect().top + window.scrollY,
+		behavior: 'smooth',
+	});
+});
+
+cooperationBtn.addEventListener('click', function () {
+	window.scrollTo({
+		top: cooperationSection.getBoundingClientRect().top + window.scrollY,
 		behavior: 'smooth',
 	});
 });
@@ -55,7 +64,7 @@ const swiper = new Swiper('.preview-swiper', {
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
-		draggable: true,
+		draggable: false,
 	},
 	// autoplay: {
 	// 	delay: 5000,

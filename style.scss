@@ -60,9 +60,6 @@ body {
 	.preview-section {
 		height: 100vh;
 		min-height: 900px;
-		// background-position: center;
-		// background-repeat: no-repeat;
-		// background-size: cover;
 		position: relative;
 		.preview-section-bg {
 			position: absolute;
@@ -104,7 +101,7 @@ body {
 				}
 				.swiper-scrollbar-drag {
 					background-color: #f9fbf3;
-					cursor: pointer;
+					// cursor: pointer;
 				}
 			}
 		}
@@ -227,7 +224,7 @@ body {
 				display: flex;
 				gap: 28px;
 				align-items: center;
-				button {
+				.slide-cooperation-btn {
 					font-family: 'Roboto', sans-serif;
 					padding: 10px 40px;
 					color: #374836;
@@ -236,13 +233,18 @@ body {
 					font-weight: 700;
 					line-height: 24px;
 					border: none;
+					cursor: pointer;
 				}
-				> div {
-					border-bottom: 1px solid #f9fbf3;
-					padding-bottom: 7px;
-					font-weight: 700;
-					line-height: 24px;
-					letter-spacing: 0.05em;
+				.projects-link {
+					text-decoration: none;
+					color: #f9fbf3;
+					> div {
+						border-bottom: 1px solid #f9fbf3;
+						padding-bottom: 7px;
+						font-weight: 700;
+						line-height: 24px;
+						letter-spacing: 0.05em;
+					}
 				}
 			}
 		}
