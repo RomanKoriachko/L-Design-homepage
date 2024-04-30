@@ -31,20 +31,24 @@ contactsBtn.addEventListener('click', function () {
 
 // Initialization of swipers
 
-const progressCircle = document.querySelector('.autoplay-progress svg');
-const progressContent = document.querySelector('.autoplay-progress span');
+// const progressCircle = document.querySelector('.autoplay-progress svg');
+// const progressContent = document.querySelector('.autoplay-progress span');
 
 const swiper = new Swiper('.preview-swiper', {
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	spaceBetween: 80,
-	// effect: 'fade',
-	// fadeEffect: {
-	// 	crossFade: true,
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev',
 	// },
-
+	spaceBetween: 0,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true,
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+	loop: true,
 	// pagination: {
 	// 	el: '.swiper-pagination',
 	// },

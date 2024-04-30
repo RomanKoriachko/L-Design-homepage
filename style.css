@@ -188,13 +188,51 @@ body {
 .main .preview-section {
   height: 100vh;
   min-height: 900px;
-  background-image: url(images/bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+}
+.main .preview-section .preview-section-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0e0e0e;
+  opacity: 0.5;
+  z-index: 2;
 }
 .main .preview-section .preview-section-container {
-  position: relative;
+  max-width: 1280px;
+  width: calc(100% - 160px);
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.main .preview-section .preview-section-container .swiper-scrollbar {
+  width: 335px;
+  background-color: rgba(249, 251, 243, 0.5215686275);
+  bottom: 70px;
+  left: 0px;
+  position: absolute;
+  z-index: 1000;
+}
+.main .preview-section .preview-section-container .swiper-scrollbar .swiper-page {
+  position: absolute;
+  color: #f9fbf3;
+  top: -40px;
+  font-weight: 700;
+}
+.main .preview-section .preview-section-container .swiper-scrollbar .swiper-start-page {
+  left: 0px;
+}
+.main .preview-section .preview-section-container .swiper-scrollbar .swiper-end-page {
+  right: 0px;
+}
+.main .preview-section .preview-section-container .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: #f9fbf3;
+  cursor: pointer;
 }
 .main .preview-section .preview-experience-container {
   position: absolute;
@@ -235,23 +273,41 @@ body {
   height: 100vh;
   min-height: 900px;
 }
-.main .preview-section .swiper .slider-content {
+.main .preview-section .swiper .swiper-slide {
+  z-index: -1;
+  position: relative;
+  overflow: hidden;
+}
+.main .preview-section .swiper .swiper-slide > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .preview-section .swiper .scroll-container {
+  position: relative;
+  z-index: 100;
+}
+.main .preview-section .slider-content {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #f9fbf3;
 }
-.main .preview-section .swiper .slider-content .slide-title {
+.main .preview-section .slider-content .slide-title {
   font-size: 80px;
   font-weight: 300;
   line-height: 92px;
   color: white;
 }
-.main .preview-section .swiper .slider-content .slide-title-bold {
+.main .preview-section .slider-content .slide-title-bold {
   font-weight: 600;
   margin-top: 19px;
 }
-.main .preview-section .swiper .slider-content .slide-subtitle {
+.main .preview-section .slider-content .slide-subtitle {
   font-size: 20px;
   line-height: 30px;
   margin-top: 37px;
@@ -260,12 +316,12 @@ body {
   opacity: 0.75;
   width: 60%;
 }
-.main .preview-section .swiper .slider-content .slide-buttons-row {
+.main .preview-section .slider-content .slide-buttons-row {
   display: flex;
   gap: 28px;
   align-items: center;
 }
-.main .preview-section .swiper .slider-content .slide-buttons-row button {
+.main .preview-section .slider-content .slide-buttons-row button {
   font-family: "Roboto", sans-serif;
   padding: 10px 40px;
   color: #374836;
@@ -273,15 +329,16 @@ body {
   text-transform: capitalize;
   font-weight: 700;
   line-height: 24px;
+  border: none;
 }
-.main .preview-section .swiper .slider-content .slide-buttons-row > div {
+.main .preview-section .slider-content .slide-buttons-row > div {
   border-bottom: 1px solid #f9fbf3;
   padding-bottom: 7px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.05em;
 }
-.main .preview-section .swiper .slide-link-container {
+.main .preview-section .slide-link-container {
   position: absolute;
   bottom: 70px;
   right: 0px;
@@ -294,20 +351,20 @@ body {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-.main .preview-section .swiper .slide-link-container .slide-link-images-row {
+.main .preview-section .slide-link-container .slide-link-images-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.main .preview-section .swiper .slide-link-container .slide-link-images-row .location-img {
+.main .preview-section .slide-link-container .slide-link-images-row .location-img {
   width: 22px;
   height: 30px;
   background-image: url(images/location.svg);
   background-position: center;
   background-repeat: no-repeat;
 }
-.main .preview-section .swiper .slide-link-container .slide-link-images-row .link-btn {
+.main .preview-section .slide-link-container .slide-link-images-row .link-btn {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -316,17 +373,17 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-.main .preview-section .swiper .slide-link-container .slide-link-title {
+.main .preview-section .slide-link-container .slide-link-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
   margin-bottom: 12px;
 }
-.main .preview-section .swiper .slide-link-container .slide-link-subtitle {
+.main .preview-section .slide-link-container .slide-link-subtitle {
   opacity: 0.75;
   line-height: 24px;
 }
-.main .preview-section .swiper .slide-link-container::after {
+.main .preview-section .slide-link-container::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -338,27 +395,6 @@ body {
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-}
-.main .preview-section .swiper .swiper-scrollbar {
-  width: 335px;
-  background-color: rgba(249, 251, 243, 0.5215686275);
-  bottom: 70px;
-}
-.main .preview-section .swiper .swiper-scrollbar .swiper-page {
-  position: absolute;
-  color: #f9fbf3;
-  top: -40px;
-  font-weight: 700;
-}
-.main .preview-section .swiper .swiper-scrollbar .swiper-start-page {
-  left: 0px;
-}
-.main .preview-section .swiper .swiper-scrollbar .swiper-end-page {
-  right: 0px;
-}
-.main .preview-section .swiper .swiper-scrollbar .swiper-scrollbar-drag {
-  background-color: #f9fbf3;
-  cursor: pointer;
 }
 .main .description-section {
   position: relative;
@@ -567,9 +603,6 @@ body {
   border-radius: 20px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 28.92%, rgba(0, 0, 0, 0.4) 74.32%);
 }
-.main .services-section .services-container .services-item-big {
-  border-radius: 40px;
-}
 .main .services-section .services-container .services-item-big .services-item-title {
   font-size: 46px;
   font-weight: 500;
@@ -598,9 +631,6 @@ body {
 .main .services-section .hovered-1 {
   grid-template-columns: 2fr 1fr 1fr 1fr;
 }
-.main .services-section .hovered-1 .services-item-1 {
-  border-radius: 40px;
-}
 .main .services-section .hovered-1 .services-item-1 .services-item-title {
   font-size: 46px;
   font-weight: 500;
@@ -611,14 +641,8 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
-.main .services-section .hovered-1 .services-item-1 .services-item-cover {
-  border-radius: 40px;
-}
 .main .services-section .hovered-2 {
   grid-template-columns: 1fr 2fr 1fr 1fr;
-}
-.main .services-section .hovered-2 .services-item-2 {
-  border-radius: 40px;
 }
 .main .services-section .hovered-2 .services-item-2 .services-item-title {
   font-size: 46px;
@@ -630,14 +654,8 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
-.main .services-section .hovered-2 .services-item-2 .services-item-cover {
-  border-radius: 40px;
-}
 .main .services-section .hovered-3 {
   grid-template-columns: 1fr 1fr 2fr 1fr;
-}
-.main .services-section .hovered-3 .services-item-3 {
-  border-radius: 40px;
 }
 .main .services-section .hovered-3 .services-item-3 .services-item-title {
   font-size: 46px;
@@ -649,14 +667,8 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
-.main .services-section .hovered-3 .services-item-3 .services-item-cover {
-  border-radius: 40px;
-}
 .main .services-section .hovered-4 {
   grid-template-columns: 1fr 1fr 1fr 2fr;
-}
-.main .services-section .hovered-4 .services-item-4 {
-  border-radius: 40px;
 }
 .main .services-section .hovered-4 .services-item-4 .services-item-title {
   font-size: 46px;
@@ -667,9 +679,6 @@ body {
 .main .services-section .hovered-4 .services-item-4 .services-item-subtitle {
   font-size: 20px;
   line-height: 30px;
-}
-.main .services-section .hovered-4 .services-item-4 .services-item-cover {
-  border-radius: 40px;
 }
 .main .thoughts-section {
   background-color: #e1ece3;
