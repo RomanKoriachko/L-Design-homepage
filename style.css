@@ -177,6 +177,13 @@ body {
   text-transform: uppercase;
   line-height: 24px;
 }
+.header .header-container .header-menu a {
+  text-decoration: none;
+  color: #f9fbf3;
+}
+.header .header-container .header-menu .header-menu-item {
+  cursor: pointer;
+}
 
 .main .preview-section {
   height: 100vh;
@@ -471,7 +478,10 @@ body {
   position: relative;
 }
 .main .cooperation-section .cooperation-content .cooperation-step {
-  width: 400px;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 330px;
+  max-width: 400px;
 }
 .main .cooperation-section .cooperation-content .cooperation-step .cooperation-step-title {
   font-size: 24px;

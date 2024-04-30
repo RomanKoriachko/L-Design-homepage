@@ -1,3 +1,34 @@
+// Navigation
+
+const aboutBtn = document.querySelector('.header-menu-item-1');
+const servicesBtn = document.querySelector('.header-menu-item-3');
+const contactsBtn = document.querySelector('.header-menu-item-4');
+
+const aboutSection = document.querySelector('.description-section');
+const servicesSection = document.querySelector('.services-section');
+const contactsSection = document.querySelector('.contacts-section');
+
+aboutBtn.addEventListener('click', function () {
+	window.scrollTo({
+		top: aboutSection.getBoundingClientRect().top + window.scrollY,
+		behavior: 'smooth',
+	});
+});
+
+servicesBtn.addEventListener('click', function () {
+	window.scrollTo({
+		top: servicesSection.getBoundingClientRect().top + window.scrollY,
+		behavior: 'smooth',
+	});
+});
+
+contactsBtn.addEventListener('click', function () {
+	window.scrollTo({
+		top: contactsSection.getBoundingClientRect().top + window.scrollY,
+		behavior: 'smooth',
+	});
+});
+
 // Initialization of swipers
 
 const progressCircle = document.querySelector('.autoplay-progress svg');
