@@ -591,6 +591,60 @@ body {
 			}
 		}
 	}
+	.thoughts-section {
+		background-color: #e1ece3;
+		padding: 100px 0px;
+		.thoughts-section-container {
+			padding-right: 200px;
+			padding-left: 200px;
+			margin: 0 auto;
+			max-width: 1000px;
+		}
+		.thoughts-subtitle-breakets {
+			display: flex;
+			gap: 12px;
+			color: #374836;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 24px;
+			text-transform: uppercase;
+			margin-bottom: 43px;
+			justify-content: center;
+		}
+		.thoughts-container {
+			display: flex;
+			gap: 56px;
+			.thoughts-photo {
+				min-width: 193px;
+				height: 193px;
+				border-radius: 50%;
+				background-image: url(images/thoughts-img.jpg);
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.thoughts-content {
+				font-size: 20px;
+				font-weight: 300;
+				line-height: 30px;
+				.thoughts-text {
+					margin-bottom: 24px;
+				}
+				.thoughts-bold {
+					font-size: 16px;
+					font-weight: 500;
+					line-height: 16px;
+					text-transform: uppercase;
+					margin-bottom: 8px;
+				}
+				.thoughts-subtitle {
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 16px;
+					color: #7f8f80;
+				}
+			}
+		}
+	}
 }
 
 /* 

@@ -660,6 +660,60 @@ body {
 .main .services-section .hovered-4 .services-item-4 .services-item-cover {
   border-radius: 40px;
 }
+.main .thoughts-section {
+  background-color: #e1ece3;
+  padding: 100px 0px;
+}
+.main .thoughts-section .thoughts-section-container {
+  padding-right: 200px;
+  padding-left: 200px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.main .thoughts-section .thoughts-subtitle-breakets {
+  display: flex;
+  gap: 12px;
+  color: #374836;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 43px;
+  justify-content: center;
+}
+.main .thoughts-section .thoughts-container {
+  display: flex;
+  gap: 56px;
+}
+.main .thoughts-section .thoughts-container .thoughts-photo {
+  min-width: 193px;
+  height: 193px;
+  border-radius: 50%;
+  background-image: url(images/thoughts-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main .thoughts-section .thoughts-container .thoughts-content {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.main .thoughts-section .thoughts-container .thoughts-content .thoughts-text {
+  margin-bottom: 24px;
+}
+.main .thoughts-section .thoughts-container .thoughts-content .thoughts-bold {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.main .thoughts-section .thoughts-container .thoughts-content .thoughts-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #7f8f80;
+}
 
 /* 
 
