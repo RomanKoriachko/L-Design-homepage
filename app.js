@@ -104,31 +104,47 @@ const serviceItem4 = document.querySelector('.services-item-4');
 const servicesContainer = document.querySelector('.services-container');
 
 serviceItem1.addEventListener('mouseover', () => {
-	servicesContainer.classList.add('hovered-1');
+	if (window.innerWidth >= 1350) {
+		servicesContainer.classList.add('hovered-1');
+	}
 });
 serviceItem1.addEventListener('mouseout', () => {
-	servicesContainer.classList.remove('hovered-1');
+	if (window.innerWidth >= 1350) {
+		servicesContainer.classList.remove('hovered-1');
+	}
 });
 
 serviceItem2.addEventListener('mouseover', () => {
-	servicesContainer.classList.add('hovered-2');
+	if (window.innerWidth >= 1350) {
+		servicesContainer.classList.add('hovered-2');
+	}
 });
 serviceItem2.addEventListener('mouseout', () => {
-	servicesContainer.classList.remove('hovered-2');
+	if (window.innerWidth >= 1350) {
+		servicesContainer.classList.remove('hovered-2');
+	}
 });
 
 serviceItem3.addEventListener('mouseover', () => {
-	servicesContainer.classList.add('hovered-3');
+	if (window.innerWidth >= 1350) {
+		servicesContainer.classList.add('hovered-3');
+	}
 });
 serviceItem3.addEventListener('mouseout', () => {
-	servicesContainer.classList.remove('hovered-3');
+	if (window.innerWidth >= 1350) {
+		servicesContainer.classList.remove('hovered-3');
+	}
 });
 
 serviceItem4.addEventListener('mouseover', () => {
-	servicesContainer.classList.add('hovered-4');
+	if (window.innerWidth >= 1350) {
+		servicesContainer.classList.add('hovered-4');
+	}
 });
 serviceItem4.addEventListener('mouseout', () => {
-	servicesContainer.classList.remove('hovered-4');
+	if (window.innerWidth >= 1350) {
+		servicesContainer.classList.remove('hovered-4');
+	}
 });
 
 // Change projects-link-wrapper background image when projects-swiper slide change

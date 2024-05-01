@@ -943,6 +943,20 @@ body {
 	}
 }
 
+@media (max-width: 1350px) {
+	.main {
+		.services-section {
+			.services-container {
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr 1fr;
+				.services-item {
+					min-height: 500px;
+				}
+			}
+		}
+	}
+}
+
 // ------------- Laptop -------------
 @media (max-width: 1200px) {
 	.main {
@@ -1149,6 +1163,26 @@ body {
 				.cooperation-title {
 					font-size: 36px;
 					line-height: 46px;
+				}
+			}
+		}
+		.services-section {
+			padding: 28px 0px;
+			.services-header-row {
+				margin-bottom: 26px;
+			}
+			.services-container {
+				grid-template-columns: 1fr;
+				grid-template-rows: auto;
+				.services-item {
+					min-height: auto;
+					height: 216px;
+					.services-item-title {
+						margin-bottom: 8px;
+					}
+				}
+				.services-item-1 {
+					min-height: 540px;
 				}
 			}
 		}

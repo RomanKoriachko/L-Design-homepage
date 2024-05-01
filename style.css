@@ -974,6 +974,15 @@ body {
     background-position: left 50% bottom -250px;
   }
 }
+@media (max-width: 1350px) {
+  .main .services-section .services-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .main .services-section .services-container .services-item {
+    min-height: 500px;
+  }
+}
 @media (max-width: 1200px) {
   .main .cooperation-section .cooperation-content .cooperation-step {
     min-width: 310px;
@@ -1144,6 +1153,26 @@ body {
   .main .cooperation-section .cooperation-title-row .cooperation-title {
     font-size: 36px;
     line-height: 46px;
+  }
+  .main .services-section {
+    padding: 28px 0px;
+  }
+  .main .services-section .services-header-row {
+    margin-bottom: 26px;
+  }
+  .main .services-section .services-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .main .services-section .services-container .services-item {
+    min-height: auto;
+    height: 216px;
+  }
+  .main .services-section .services-container .services-item .services-item-title {
+    margin-bottom: 8px;
+  }
+  .main .services-section .services-container .services-item-1 {
+    min-height: 540px;
   }
 }
 @media (max-width: 350px) {
