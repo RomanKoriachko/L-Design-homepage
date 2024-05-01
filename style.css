@@ -987,6 +987,10 @@ body {
   .main .cooperation-section .cooperation-content .cooperation-step {
     min-width: 310px;
   }
+  .main .thoughts-section .thoughts-section-container {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 @media (max-width: 992px) {
   .container {
@@ -1076,6 +1080,18 @@ body {
   }
   .main .cooperation-section .cooperation-content .cooperation-tablet-steps {
     display: grid;
+  }
+  .main .thoughts-section .thoughts-section-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .main .thoughts-section .thoughts-subtitle-breakets {
+    justify-content: flex-start;
+  }
+  .main .thoughts-section .thoughts-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
   }
 }
 @media (max-width: 650px) {
@@ -1173,6 +1189,13 @@ body {
   }
   .main .services-section .services-container .services-item-1 {
     min-height: 540px;
+  }
+  .main .thoughts-section {
+    padding: 20px 0px;
+  }
+  .main .thoughts-section .thoughts-section-container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (max-width: 350px) {
