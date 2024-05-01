@@ -141,16 +141,6 @@ body {
   padding-right: 80px;
 }
 
-.top-shadow {
-  position: fixed;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30%;
-  box-shadow: 0px 30px 300px 140px rgba(0, 0, 0, 0.54);
-  z-index: 100;
-}
-
 .header {
   position: absolute;
   top: 0px;
@@ -191,6 +181,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   display: none;
+}
+.header .burger-menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #f9fbf3;
+  z-index: 1000;
 }
 
 .main .preview-section {
@@ -550,6 +548,23 @@ body {
 .main .cooperation-section .cooperation-content .cooperation-step-4 {
   position: absolute;
   top: 55px;
+}
+.main .cooperation-section .cooperation-content .cooperation-tablet-steps {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 44px 20px;
+}
+.main .cooperation-section .cooperation-content .cooperation-tablet-steps .cooperation-step-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 12px;
+}
+.main .cooperation-section .cooperation-content .cooperation-tablet-steps .cooperation-step-subtitle {
+  font-size: 20px;
+  line-height: 30px;
+  opacity: 0.5;
 }
 .main .services-section {
   padding-top: 60px;
@@ -959,6 +974,11 @@ body {
     background-position: left 50% bottom -250px;
   }
 }
+@media (max-width: 1200px) {
+  .main .cooperation-section .cooperation-content .cooperation-step {
+    min-width: 310px;
+  }
+}
 @media (max-width: 992px) {
   .container {
     padding-left: 30px;
@@ -990,8 +1010,8 @@ body {
     margin-top: 106px;
   }
   .main .preview-section .slider-content .slide-title {
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 50px;
+    line-height: 60px;
   }
   .main .preview-section .slider-content .slide-title-bold {
     margin-top: 6px;
@@ -1002,6 +1022,68 @@ body {
   .main .preview-section .slide-link-container {
     position: static;
     margin-top: 46px;
+  }
+  .main .description-section {
+    padding-bottom: 80px;
+  }
+  .main .description-section .description-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .main .description-section .description-content-row {
+    flex-direction: column;
+  }
+  .main .description-section .description-content-row .description-text {
+    width: 100%;
+  }
+  .main .description-section .description-content {
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  .main .cooperation-section {
+    padding-bottom: 100px;
+  }
+  .main .cooperation-section .cooperation-title-row {
+    flex-direction: column;
+    align-items: normal;
+    margin-bottom: 16px;
+  }
+  .main .cooperation-section .cooperation-title-row .cooperation-title {
+    font-size: 56px;
+    line-height: 66px;
+  }
+  .main .cooperation-section .cooperation-title-row .cooperation-subtitle {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .cooperation-section .cooperation-title-row .cooperation-subtitle .cooperation-arrow {
+    margin: 0;
+  }
+  .main .cooperation-section .cooperation-content .cooperation-step,
+  .main .cooperation-section .cooperation-content .cooperation-bar {
+    display: none;
+  }
+  .main .cooperation-section .cooperation-content .cooperation-tablet-steps {
+    display: grid;
+  }
+}
+@media (max-width: 650px) {
+  .main .description-section .description-bg {
+    background-position: left 50% bottom -100px;
+    background-size: cover;
+  }
+  .main .description-section .description-content-row .description-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .main .description-section .description-content-row .description-row .description-row-item {
+    text-align: center;
+  }
+  .main .cooperation-section .cooperation-content .cooperation-tablet-steps {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 @media (max-width: 576px) {
@@ -1041,5 +1123,32 @@ body {
   .main .preview-section .slide-link-container {
     width: calc(100% - 41px);
     max-width: none;
+  }
+  .main .description-section {
+    padding-top: 32px;
+    padding-bottom: 42px;
+  }
+  .main .description-section .description-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .main .description-section .description-content {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: normal;
+  }
+  .main .cooperation-section {
+    padding: 32px 0px;
+  }
+  .main .cooperation-section .cooperation-title-row .cooperation-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+@media (max-width: 350px) {
+  .main .cooperation-section .cooperation-title-row .cooperation-title {
+    font-size: 30px;
+    line-height: 40px;
   }
 }
