@@ -33,7 +33,7 @@ contactsBtn.addEventListener('click', function () {
 
 cooperationBtn.addEventListener('click', function () {
 	window.scrollTo({
-		top: cooperationSection.getBoundingClientRect().top + window.scrollY,
+		top: contactsSection.getBoundingClientRect().top + window.scrollY,
 		behavior: 'smooth',
 	});
 });
