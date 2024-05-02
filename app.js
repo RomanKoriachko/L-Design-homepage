@@ -13,7 +13,7 @@ const cooperationSection = document.querySelector('.cooperation-section');
 for (let i = 0; i < aboutBtn.length; i++) {
 	aboutBtn[i].addEventListener('click', function () {
 		window.scrollTo({
-			top: aboutSection.getBoundingClientRect().top + window.scrollY,
+			top: aboutSection.getBoundingClientRect().top + window.scrollY - 107,
 			behavior: 'smooth',
 		});
 		document.body.style.overflow = 'auto';
@@ -24,7 +24,7 @@ for (let i = 0; i < aboutBtn.length; i++) {
 for (let i = 0; i < servicesBtn.length; i++) {
 	servicesBtn[i].addEventListener('click', function () {
 		window.scrollTo({
-			top: servicesSection.getBoundingClientRect().top + window.scrollY,
+			top: servicesSection.getBoundingClientRect().top + window.scrollY - 107,
 			behavior: 'smooth',
 		});
 		document.body.style.overflow = 'auto';
@@ -35,7 +35,7 @@ for (let i = 0; i < servicesBtn.length; i++) {
 for (let i = 0; i < contactsBtn.length; i++) {
 	contactsBtn[i].addEventListener('click', function () {
 		window.scrollTo({
-			top: contactsSection.getBoundingClientRect().top + window.scrollY,
+			top: contactsSection.getBoundingClientRect().top + window.scrollY - 107,
 			behavior: 'smooth',
 		});
 		document.body.style.overflow = 'auto';
@@ -46,7 +46,7 @@ for (let i = 0; i < contactsBtn.length; i++) {
 for (let i = 0; i < cooperationBtn.length; i++) {
 	cooperationBtn[i].addEventListener('click', function () {
 		window.scrollTo({
-			top: contactsSection.getBoundingClientRect().top + window.scrollY,
+			top: contactsSection.getBoundingClientRect().top + window.scrollY - 107,
 			behavior: 'smooth',
 		});
 		document.body.style.overflow = 'auto';
@@ -76,6 +76,18 @@ function closeBurgerMenu() {
 	burgerMenuBg.classList.remove('active');
 	document.body.style.overflow = 'auto';
 }
+
+// Add header background after scrolling
+
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 0) {
+		header.classList.add('active-bg');
+	} else {
+		header.classList.remove('active-bg');
+	}
+});
 
 // Initialization of swipers
 

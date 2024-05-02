@@ -142,13 +142,14 @@ body {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
   color: #f9fbf3;
   padding: 32px 0px;
   z-index: 100;
+  transition: background-color 0.3s;
 }
 .header .header-container {
   position: relative;
@@ -230,6 +231,11 @@ body {
 }
 .header .burger-menu-bg.active {
   display: block;
+}
+
+.header.active-bg {
+  background-color: rgba(36, 41, 36, 0.6509803922);
+  border-bottom: 1px solid #242924;
 }
 
 .main .preview-section {
@@ -1063,6 +1069,9 @@ body {
   .container {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .header {
+    background-color: transparent;
   }
   .header .header-container {
     display: flex;
