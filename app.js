@@ -94,6 +94,20 @@ const projectSwiper = new Swiper('.projects-swiper', {
 	},
 });
 
+const projectTabletSwiper = new Swiper('.projects-tablet-swiper', {
+	spaceBetween: 30,
+	loop: true,
+	slidesPerView: 'auto',
+	pagination: {
+		el: '.projects-tablet-swiper-pagination',
+		clickable: true,
+	},
+	// autoplay: {
+	// 	delay: 5000,
+	// 	disableOnInteraction: false,
+	// },
+});
+
 // Services section animation
 
 const servicesItems = document.querySelectorAll('.services-item');
