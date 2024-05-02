@@ -1,53 +1,85 @@
 // Navigation
 
-const aboutBtn = document.querySelector('.header-menu-item-1');
-const servicesBtn = document.querySelector('.header-menu-item-3');
-const contactsBtn = document.querySelector('.header-menu-item-4');
-const cooperationBtn = document.querySelector('.slide-cooperation-btn');
+const aboutBtn = document.querySelectorAll('.header-menu-item-1');
+const servicesBtn = document.querySelectorAll('.header-menu-item-3');
+const contactsBtn = document.querySelectorAll('.header-menu-item-4');
+const cooperationBtn = document.querySelectorAll('.slide-cooperation-btn');
 
 const aboutSection = document.querySelector('.description-section');
 const servicesSection = document.querySelector('.services-section');
 const contactsSection = document.querySelector('.contacts-section');
 const cooperationSection = document.querySelector('.cooperation-section');
 
-aboutBtn.addEventListener('click', function () {
-	window.scrollTo({
-		top: aboutSection.getBoundingClientRect().top + window.scrollY,
-		behavior: 'smooth',
+for (let i = 0; i < aboutBtn.length; i++) {
+	aboutBtn[i].addEventListener('click', function () {
+		window.scrollTo({
+			top: aboutSection.getBoundingClientRect().top + window.scrollY,
+			behavior: 'smooth',
+		});
+		document.body.style.overflow = 'auto';
+		closeBurgerMenu();
 	});
+}
+
+for (let i = 0; i < servicesBtn.length; i++) {
+	servicesBtn[i].addEventListener('click', function () {
+		window.scrollTo({
+			top: servicesSection.getBoundingClientRect().top + window.scrollY,
+			behavior: 'smooth',
+		});
+		document.body.style.overflow = 'auto';
+		closeBurgerMenu();
+	});
+}
+
+for (let i = 0; i < contactsBtn.length; i++) {
+	contactsBtn[i].addEventListener('click', function () {
+		window.scrollTo({
+			top: contactsSection.getBoundingClientRect().top + window.scrollY,
+			behavior: 'smooth',
+		});
+		document.body.style.overflow = 'auto';
+		closeBurgerMenu();
+	});
+}
+
+for (let i = 0; i < cooperationBtn.length; i++) {
+	cooperationBtn[i].addEventListener('click', function () {
+		window.scrollTo({
+			top: contactsSection.getBoundingClientRect().top + window.scrollY,
+			behavior: 'smooth',
+		});
+		document.body.style.overflow = 'auto';
+		closeBurgerMenu();
+	});
+}
+
+// Burger menu
+
+const burgerMenuBtn = document.querySelector('.burger-menu-btn');
+const closeBurgerMenuBtn = document.querySelector('.close-burger-btn');
+const burgerMenu = document.querySelector('.burger-menu');
+const burgerMenuBg = document.querySelector('.burger-menu-bg');
+
+burgerMenuBtn.addEventListener('click', () => {
+	burgerMenu.classList.add('active');
+	burgerMenuBg.classList.add('active');
+	document.body.style.overflow = 'hidden';
 });
 
-servicesBtn.addEventListener('click', function () {
-	window.scrollTo({
-		top: servicesSection.getBoundingClientRect().top + window.scrollY,
-		behavior: 'smooth',
-	});
+closeBurgerMenuBtn.addEventListener('click', () => {
+	closeBurgerMenu();
 });
 
-contactsBtn.addEventListener('click', function () {
-	window.scrollTo({
-		top: contactsSection.getBoundingClientRect().top + window.scrollY,
-		behavior: 'smooth',
-	});
-});
-
-cooperationBtn.addEventListener('click', function () {
-	window.scrollTo({
-		top: contactsSection.getBoundingClientRect().top + window.scrollY,
-		behavior: 'smooth',
-	});
-});
+function closeBurgerMenu() {
+	burgerMenu.classList.remove('active');
+	burgerMenuBg.classList.remove('active');
+	document.body.style.overflow = 'auto';
+}
 
 // Initialization of swipers
 
-// const progressCircle = document.querySelector('.autoplay-progress svg');
-// const progressContent = document.querySelector('.autoplay-progress span');
-
 const swiper = new Swiper('.preview-swiper', {
-	// navigation: {
-	// 	nextEl: '.swiper-button-next',
-	// 	prevEl: '.swiper-button-prev',
-	// },
 	spaceBetween: 0,
 	effect: 'fade',
 	fadeEffect: {
@@ -58,23 +90,14 @@ const swiper = new Swiper('.preview-swiper', {
 		disableOnInteraction: false,
 	},
 	loop: true,
-	// pagination: {
-	// 	el: '.swiper-pagination',
-	// },
 	scrollbar: {
 		el: '.swiper-scrollbar',
 		hide: false,
 		draggable: false,
 	},
-	// autoplay: {
-	// 	delay: 5000,
-	// },
-	// on: {
-	// 	autoplayTimeLeft(s, time, progress) {
-	// 		progressCircle.style.setProperty('--progress', 1 - progress);
-	// 		progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-	// 	},
-	// },
+	autoplay: {
+		delay: 5000,
+	},
 });
 
 const projectSwiper = new Swiper('.projects-swiper', {
@@ -102,10 +125,10 @@ const projectTabletSwiper = new Swiper('.projects-tablet-swiper', {
 		el: '.projects-tablet-swiper-pagination',
 		clickable: true,
 	},
-	// autoplay: {
-	// 	delay: 5000,
-	// 	disableOnInteraction: false,
-	// },
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
 });
 
 // Services section animation
