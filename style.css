@@ -1009,6 +1009,14 @@ body {
     padding-left: 120px;
     padding-right: 120px;
   }
+  .main .contacts-section .contacts-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .main .contacts-section .contacts-container .contacts-wrapper {
+    display: flex;
+    gap: 36px;
+  }
 }
 @media (max-width: 992px) {
   .container {
@@ -1169,6 +1177,13 @@ body {
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
+  .main .contacts-section .contacts-container .contacts-title {
+    font-size: 56px;
+    line-height: 66px;
+  }
+  .main .contacts-section .contacts-container .contacts-wrapper {
+    width: 100%;
+  }
 }
 @media (max-width: 650px) {
   .main .description-section .description-bg {
@@ -1295,10 +1310,37 @@ body {
     font-weight: 600;
     line-height: 46px;
   }
+  .main .contacts-section {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 24px;
+    padding-top: 22px;
+    padding-bottom: 30px;
+    background-size: 120%;
+    background-position: right -100px bottom -50px;
+  }
+  .main .contacts-section .contacts-container .contacts-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .main .contacts-section .contacts-container .contacts-wrapper {
+    flex-direction: column;
+  }
+  .main .contacts-section .contacts-container .contacts-wrapper .contacts-item:first-child {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 350px) {
+  .main .preview-section .slider-content .slide-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
   .main .cooperation-section .cooperation-title-row .cooperation-title {
     font-size: 30px;
     line-height: 40px;
+  }
+  .main .contacts-section .contacts-container .contacts-title {
+    font-size: 26px;
+    line-height: 36px;
   }
 }
